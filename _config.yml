@@ -3,4 +3,4 @@ permalink: /:year/:title/
 paginate: 10
 exclude: []
 name: saltfog
-baseurl: /jekyll-bootstrap
+baseurl: /saltfog.github.io/
