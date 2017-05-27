@@ -1,28 +1,54 @@
 ---
-layout: nil
-is_index: true
+layout: default
+title: Home
 ---
 
+{% assign rawtags = "" %}
+{% for post in site.posts %}
+	{% assign ttags = post.tags | join:'|' | append:'|' %}
+	{% assign rawtags = rawtags | append:ttags %}
+{% endfor %}
+{% assign rawtags = rawtags | split:'|' | sort %}
 
-{% include header.html %}
-    {% for post in paginator.posts %}
-      {% include post.html %}
-    {% endfor %}
-	
-	<div class="pagination" id="bottom_page">
-		<ul>
-			{% if paginator.previous_page %}
-				{% if paginator.previous_page == 1 %}
-				<li class="previous"><a href="{{ linkhome }}">&larr; Previous</a></li>
-				{% else %}
-				<li class="previous"><a href="{{ site.baseurl }}/page{{ paginator.previous_page }}">&larr; Previous</a></li>
-				{% endif %}
-			{% endif %}
-				<li><p>Page {{ paginator.page }} of {{ paginator.total_pages }}</p></li>
-			{% if paginator.next_page %}
-				<li class="next"><a href="{{ site.baseurl }}/page{{ paginator.next_page }}">Next &rarr;</a></li>
-			{% endif %}
-		</ul>
-	</div>
+{% assign tags = "" %}
+{% for tag in rawtags %}
+	{% if tag != "" %}
+		{% if tags == "" %}
+			{% assign tags = tag | split:'|' %}
+		{% endif %}
+		{% unless tags contains tag %}
+			{% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+		{% endunless %}
+	{% endif %}
+{% endfor %}
 
-{% include footer.html %}
+<div class="posts">
+  {% for post in site.posts %}
+    {% unless post.next %}
+      <h2 class="year">{{ post.date | date: '%Y' }}</h2>
+    {% else %}
+      {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+      {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+      {% if year != nyear %}
+        <h2 class="year">{{ post.date | date: '%Y' }}</h2>
+      {% endif %}
+    {% endunless %}
+
+    <div class="post-list">
+      <div class="post-list-date"><small>{{ post.date | date: "%b %d" }}</small></div>
+	    <div class="text-truncate"><a href="{{ post.url }}">{{ post.title }}</a></div>
+      <div class="post-list-desc">{{ post.description }}</div>
+    </div>
+
+  {% endfor %}
+</div>
+
+<hr/>
+
+{% if tags %}
+<div class="tag-cloud tag-cloud-small" id="Tags">
+  {% for tag in tags %}
+    <a id="{{ tag | slugify }}" class="tag-anchor" href="{{ site.url }}{{ site.baseurl }}/tagged#{{ tag | slugify }}"><i class="fa fa-tag muted"></i> {{ tag }}</a>
+  {% endfor %}
+</div>
+{% endif %}

@@ -1,33 +1,58 @@
-Jekyll bootstrap is a theme for jekyll which uses the [twitter bootstrap css             framework](https://github.com/twitter/bootstrap).
-The advantage of jekyll is that it is self hosted (or hosted on github) and that you can write in markdown on a text editor and just git push new posts to a server which         produces html files. The advantage of this theme is so that you can start blogging       almost right away without having to worry about making a theme.
+# Version 4.5
 
-###Setting up
-To start you own blog, simply `git clone` the [repository on github](https://github.com/ nhoss2/jekyll-bootstrap). You could also press the "fork" button on github.
+### About this repo
 
-    git clone git://github.com/nhoss2/jekyll-bootstrap.git
+This repo contains the source code of my site (referred to SITE_URL), which is built from scratch with [Jekyll](http://jekyllrb.com/) and generously hosted automatically on GitHub with free (Thanks, GitHub Pages!). This Jekyll theme is using [Font Awesome](https://fortawesome.github.io/Font-Awesome/) for the awesome icons and [Fira](https://github.com/mozilla/Fira) fonts by Mozilla for the awesome typeface.
 
-If you want to have your blog on github, make sure you change to the `gh-pages` branch.
+**SITE_URL:** [http://heiswayi.github.io](http://heiswayi.github.io)
 
-    git checkout gh-pages
+### License
 
-Then you will need to edit the `_config.yml` file at the root of repository.
+Unless otherwise stated, all original code snippets presented on this site is licensed under the [MIT](LICENSE.md) license. All original photographs and text (my blog posts) on this website ([heiswayi.github.io](http://heiswayi.github.io)) are licensed under a [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) license. If you have any questions about using any part of these materials for commercial purposes, please write me an email at hnrird(at)gmail.com.
 
-To add your own posts, add a file to the `_posts` directory which has the name `year-month-day-title.md`. Note - the file does not have to be markdown.
+### Changelogs (for personal purpose only)
 
-To publish the post, just `git push` it to your own github repo and your set!
+```
+Version 4.5
+===========
+- Updated few things, few page restructured and content revision of About page.
 
-###Things to change on `_config.yml`
-There is a config file at the root called `_config.yml`. By Default it looks like:
+Version 4.4
+===========
+- Optimized few things...
 
-    permalink: /:year/:title/
-    paginate: 10
-    exclude:
-    name: Jekyll Bootstrap
-    baseurl: /jekyll-bootstrap/
+Version 4.3
+===========
+- Removed Disqus comment.
 
-You will need to change the `name` and `baseurl` fields. The others are optional.
-The `baseurl` field is used for the css files and pagination, if you are hosting the     blog on github, you will need to change it to your repository name unless your           repository is the same name as your github user name, which means you will need to have  no value for `baseurl`.
+Version 4.2
+===========
+- Minor updates and some enhancements on tags.
+- Added round corner to tag items, top nav buttons and code block.
+- Updated site title, description and brand.
 
-For more information on Jekyll, visit their [wiki on github](https://github.com/mojombo/ jekyll/wiki).
+Version 4.1
+===========
+- Added line number to PRE CODE block.
 
-For more information on github pages: [http://pages.github.com](http://pages.github.com).
+Version 4.0
+===========
+- Made some changes to layout design.
+- Added tag-cloud at the bottom of homepage.
+- Minimized the use of Font Awesome icons in typography.
+
+Version 3.2
+===========
+- Added Disqus comment feature.
+
+Version 3.1
+===========
+- Added post tags at the bottom of post layout and tag collection page (tagged.html).
+
+Version 3.0
+===========
+- Updated to new layout design, focused more on article listing.
+- Removed masonry-style project list from the homepage.
+```
+
+© Handcrafted by [Heiswayi Nrird](http://heiswayi.github.io) with love.

@@ -1,6 +1,56 @@
-# Jekyll
-permalink: /:year/:title/
-paginate: 10
-exclude: []
-name: saltfog
-baseurl: /saltfog.github.io/
+# Basic site info
+title:              "Casey Jenkins •••"
+description:        "Life Experience, Technology & Research"
+keywords:           "heiswayi nrird, personal blog, software engineer, life experience, technology and research"
+logo_text:          "Casey Jenkins"
+show_tagline:       true # edit file in /_includes/tagline.html
+show_social_icons:  true # edit file in /_includes/social_links.html
+og_locale:          "en_US"
+#cover:              "/assets/logo.png" # site image cover
+
+# Site URL settings
+url:                https://saltfog.github.io # main url
+baseurl:            null # for gh-pages
+#enforce_ssl:        heiswayi.nrird.com
+
+# Site author info
+author:
+  name:             "Casey Jenkins"
+  email:            saltfog@gmail.com
+  github_username:  saltfog
+  twitter_username: jabbock
+  #facebook_url:     https://www.facebook.com/heiswayi.nrird
+
+# Disqus comment settings
+disqus_enabled:     false
+disqus_shortname:   hnbloggithub
+
+# GA
+#google_analytics_code: UA-58296043-7
+
+# Build settings
+source:             ./
+destination:        ./_site
+permalink:          /:year/:title
+markdown:           kramdown
+highlighter:        rouge
+timezone:           Asia/Kuala_Lumpur
+exclude:            ["README.md", "LICENSE.md", "CHANGELOG.md"]
+
+# Site configurations
+compress_html:
+  clippings:        all
+  comments:         ["<!-- ", " -->"]
+  endings:          all
+  ignore:
+    envs:           [local]
+  blanklines:       false
+  profile:          false
+  startings:        [html, head, body]
+
+sass:
+  sass_dir:         assets/scss
+  style:            compressed # expanded
+
+gems:
+  - jekyll-sitemap
