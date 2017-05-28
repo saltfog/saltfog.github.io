@@ -7,9 +7,9 @@ keywords: about page, about me
 
 Hello.
 
-Heiswayi Nrird is my formal alias. Call me **wayi**. Currently a Software Engineer at [Keysight Technologies](http://www.keysight.com), Penang, Malaysia. In my spare time, I love to experiment, code or build some stuffs ― some of my other works can be found on [GitHub](http://heiswayi.github.io/my-repos/), [Gist](http://heiswayi.github.io/my-gists/), [CodePen](http://codepen.io/heiswayi/) and [JSFiddle](http://jsfiddle.net/user/heiswayi/). Sometimes, I love to click with my camera ― check out [my landscape photography](https://heiswayi.github.io/my-photography/).
+My name is Casey Jenkins is my formal alias. I'm currently a Software Engineer at [The Boeing Company](http://www.boeing.com). In my spare time, I love to experiment, code or build some stuffs ― some of my other works can be found on [GitHub](https://github.com/saltfog/).
 
-For contact, you may write an email to me at **hnrird(at)gmail.com**.
+For contact, you may write an email to me at **saltfog(at)gmail.com**.
 
 ---
 
