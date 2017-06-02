@@ -35,7 +35,7 @@ permalink:          /:year/:title
 markdown:           kramdown
 highlighter:        rouge
 timezone:           Asia/Kuala_Lumpur
-exclude:            ["README.md", "LICENSE.md", "CHANGELOG.md"]
+exclude:            ["README.md", "LICENSE.md"]
 
 # Site configurations
 compress_html:
