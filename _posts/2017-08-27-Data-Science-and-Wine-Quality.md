@@ -19,6 +19,12 @@ comments: true
  # The wine quality values appear to follow a fairly normal, bell-shaped distribution, centered around a value of six.
  summary(wine)
  
+ ```
+ **Hisogram**
+ ![Histogram](https://saltfog.github.io/assets/images/histogram.png)
+ 
+ ```
+ 
  ##  fixed.acidity    volatile.acidity  citric.acid     residual.sugar  
  ##  Min.   : 3.800   Min.   :0.0800   Min.   :0.0000   Min.   : 0.600  
  ##  1st Qu.: 6.400   1st Qu.:0.2300   1st Qu.:0.2500   1st Qu.: 1.800  
@@ -78,100 +84,7 @@ comments: true
  ##        fixed.acidity 
  ##                    1 
  ## 
- ## Node number 1: 3248 observations,    complexity param=0.1730933
- ##   mean=5.848522, MSE=0.8305027 
- ##   left son=2 (2247 obs) right son=3 (1001 obs)
- ##   Primary splits:
- ##       alcohol              < 10.85    to the left,  improve=0.17309330, (0 missing)
- ##       density              < 0.992265 to the right, improve=0.11069620, (0 missing)
- ##       chlorides            < 0.0395   to the right, improve=0.07529120, (0 missing)
- ##       free.sulfur.dioxide  < 11.75    to the left,  improve=0.03771371, (0 missing)
- ##       total.sulfur.dioxide < 153.5    to the right, improve=0.03310689, (0 missing)
- ##   Surrogate splits:
- ##       density              < 0.992065 to the right, agree=0.870, adj=0.579, (0 split)
- ##       chlorides            < 0.0355   to the right, agree=0.782, adj=0.292, (0 split)
- ##       total.sulfur.dioxide < 102.5    to the right, agree=0.716, adj=0.077, (0 split)
- ##       sulphates            < 0.335    to the right, agree=0.698, adj=0.020, (0 split)
- ##       fixed.acidity        < 5.25     to the right, agree=0.695, adj=0.010, (0 split)
- ## 
- ## Node number 2: 2247 observations,    complexity param=0.04673914
- ##   mean=5.595461, MSE=0.6173893 
- ##   left son=4 (1172 obs) right son=5 (1075 obs)
- ##   Primary splits:
- ##       volatile.acidity    < 0.2525   to the right, improve=0.09088154, (0 missing)
- ##       free.sulfur.dioxide < 13.5     to the left,  improve=0.04071408, (0 missing)
- ##       alcohol             < 10.15    to the left,  improve=0.03109034, (0 missing)
- ##       citric.acid         < 0.205    to the left,  improve=0.02987939, (0 missing)
- ##       pH                  < 3.325    to the left,  improve=0.02087396, (0 missing)
- ##   Surrogate splits:
- ##       total.sulfur.dioxide < 153.5    to the right, agree=0.587, adj=0.137, (0 split)
- ##       citric.acid          < 0.265    to the left,  agree=0.587, adj=0.136, (0 split)
- ##       pH                   < 3.275    to the left,  agree=0.580, adj=0.123, (0 split)
- ##       alcohol              < 10.05    to the left,  agree=0.575, adj=0.111, (0 split)
- ##       density              < 0.994235 to the right, agree=0.550, adj=0.060, (0 split)
- ## 
- ## Node number 3: 1001 observations,    complexity param=0.03098582
- ##   mean=6.416583, MSE=0.8424423 
- ##   left son=6 (77 obs) right son=7 (924 obs)
- ##   Primary splits:
- ##       free.sulfur.dioxide  < 11.5     to the left,  improve=0.09911648, (0 missing)
- ##       alcohol              < 11.85    to the left,  improve=0.05615603, (0 missing)
- ##       fixed.acidity        < 8.05     to the right, improve=0.04155984, (0 missing)
- ##       pH                   < 3.245    to the left,  improve=0.03745208, (0 missing)
- ##       total.sulfur.dioxide < 78.5     to the left,  improve=0.03096356, (0 missing)
- ##   Surrogate splits:
- ##       total.sulfur.dioxide < 48.5     to the left,  agree=0.932, adj=0.117, (0 split)
- ## 
- ## Node number 4: 1172 observations,    complexity param=0.01113703
- ##   mean=5.368601, MSE=0.5160107 
- ##   left son=8 (172 obs) right son=9 (1000 obs)
- ##   Primary splits:
- ##       volatile.acidity     < 0.4225   to the right, improve=0.04967525, (0 missing)
- ##       free.sulfur.dioxide  < 22.5     to the left,  improve=0.04669360, (0 missing)
- ##       alcohol              < 10.25    to the left,  improve=0.02522470, (0 missing)
- ##       chlorides            < 0.0495   to the right, improve=0.02450074, (0 missing)
- ##       total.sulfur.dioxide < 86.5     to the left,  improve=0.02248320, (0 missing)
- ##   Surrogate splits:
- ##       density       < 0.9912   to the left,  agree=0.858, adj=0.029, (0 split)
- ##       fixed.acidity < 9.85     to the right, agree=0.857, adj=0.023, (0 split)
- ##       citric.acid   < 0.11     to the left,  agree=0.856, adj=0.017, (0 split)
- ##       chlorides     < 0.206    to the right, agree=0.854, adj=0.006, (0 split)
- ##       alcohol       < 8.55     to the left,  agree=0.854, adj=0.006, (0 split)
- ## 
- ## Node number 5: 1075 observations
- ##   mean=5.842791, MSE=0.6106341 
- ## 
- ## Node number 6: 77 observations
- ##   mean=5.415584, MSE=1.048069 
- ## 
- ## Node number 7: 924 observations,    complexity param=0.0138018
- ##   mean=6.5, MSE=0.7348485 
- ##   left son=14 (495 obs) right son=15 (429 obs)
- ##   Primary splits:
- ##       alcohol        < 11.85    to the left,  improve=0.05483062, (0 missing)
- ##       fixed.acidity  < 8.05     to the right, improve=0.04720628, (0 missing)
- ##       pH             < 3.245    to the left,  improve=0.04398018, (0 missing)
- ##       residual.sugar < 1.175    to the left,  improve=0.02526233, (0 missing)
- ##       density        < 0.990005 to the right, improve=0.02499349, (0 missing)
- ##   Surrogate splits:
- ##       density          < 0.99111  to the right, agree=0.713, adj=0.382, (0 split)
- ##       volatile.acidity < 0.305    to the left,  agree=0.661, adj=0.270, (0 split)
- ##       chlorides        < 0.0355   to the right, agree=0.623, adj=0.189, (0 split)
- ##       residual.sugar   < 1.85     to the left,  agree=0.562, adj=0.056, (0 split)
- ##       fixed.acidity    < 6.175    to the right, agree=0.558, adj=0.049, (0 split)
- ## 
- ## Node number 8: 172 observations
- ##   mean=4.982558, MSE=0.4938818 
- ## 
- ## Node number 9: 1000 observations
- ##   mean=5.435, MSE=0.489775 
- ## 
- ## Node number 14: 495 observations
- ##   mean=6.313131, MSE=0.7322518 
- ## 
- ## Node number 15: 429 observations
- ##   mean=6.715618, MSE=0.6510614
- 
+
  library(rpart.plot)
  
  ## Loading required package: rpart
@@ -180,6 +93,8 @@ comments: true
  
 ```
 
- ### Decision Tree
+ **Decision Tree**
+ 
+ Because alcohol was used first in the tree, it is the single most important predictor of wine quality.
 
 ![Decision-Tree](https://saltfog.github.io/assets/images/Decision-Tree.png)
