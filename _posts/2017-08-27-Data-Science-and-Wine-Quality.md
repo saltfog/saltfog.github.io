@@ -2,7 +2,8 @@
 layout: post
 title: Data Science and Wine Quality
 description: Determine which factors have the greatest effect on wine quality, the analysis was for a client
-keywords: data scienc
+keywords: data science
+tags: [R],[Data Science]
 comments: true
 ---
 
