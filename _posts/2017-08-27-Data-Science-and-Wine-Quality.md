@@ -97,4 +97,4 @@ comments: true
  
  Because alcohol was used first in the tree, it is the single most important predictor of wine quality.
 
-![DecisionTree](https://saltfog.github.io/assets/images/Decision-Tree.png)
+![Decision-Tree](https://saltfog.github.io/assets/images/Decision-Tree.png)
