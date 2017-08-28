@@ -21,4 +21,4 @@ This site (blog) is a place I share my thoughts, opinions, reviews, ideas, proje
 
 #### License
 
-Unless otherwise stated, all original code snippets presented on this site is licensed under [MIT License](http://heiswayi.github.io/mit-license). All original photographs and text (my blog posts) on this website are licensed under [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/). If you have any questions about using any part of these materials for commercial purposes, please write me an email at **hnrird(at)gmail.com**.
+Unless otherwise stated, all original code snippets presented on this site is licensed under [MIT License](http://heiswayi.github.io/mit-license). All original photographs and text (my blog posts) on this website are licensed under [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/). If you have any questions about using any part of these materials for commercial purposes, please write me an email at **saltfog(at)gmail.com**.
