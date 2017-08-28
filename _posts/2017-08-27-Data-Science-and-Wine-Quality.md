@@ -17,13 +17,13 @@ comments: true
  hist(wine$quality)
  
  # The wine quality values appear to follow a fairly normal, bell-shaped distribution, centered around a value of six.
- summary(wine)
  
  ```
- **Hisogram**
+ **Histogram**
  ![Histogram](https://saltfog.github.io/assets/images/histogram.png)
  
  ```
+ summary(wine)
  
  ##  fixed.acidity    volatile.acidity  citric.acid     residual.sugar  
  ##  Min.   : 3.800   Min.   :0.0800   Min.   :0.0000   Min.   : 0.600  
