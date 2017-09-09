@@ -10,8 +10,10 @@ comments: true
 
 **Analysis-Random-Forest.r**
 
-Data Source
+Mushroom Data Source
 [archive.ics.uci.edu](https://archive.ics.uci.edu/ml/datasets/mushroom)
+
+**Load the needed R libraries**
 
 ```r
  #Load needed librarys
@@ -21,8 +23,6 @@ Data Source
  library(caret)
  library(ggplot2)
  ```
- **Histogram**
- ![Histogram](https://saltfog.github.io/assets/images/histogram.png)
  
  ```
  #Set a consistent seed
@@ -35,6 +35,7 @@ Data Source
   head(data)
  
 ```
+**Just a few of the 23 variables**
 ```
 Edible CapShape CapSurface CapColor Bruises    Odor GillAttachment
 1 Poisonous   Convex     Smooth    Brown    True Pungent           Free
@@ -44,8 +45,12 @@ Edible CapShape CapSurface CapColor Bruises    Odor GillAttachment
 5    Edible   Convex     Smooth     Gray   False    None           Free
 6    Edible   Convex      Scaly   Yellow    True  Almond           Free
 
-#Create data for training, set confidence level
+```
+**Create data for training and testing.**
 
+This is the back bone for machine learning. We are taking the data and splitting into two groups one is for the model the other is to run through the model, to train the model. The test data will be ~7700 records and the training data will be around ~400 records.
+
+```
 sample.ind = sample(2, 
                      nrow(data),
                      replace = T,
@@ -53,9 +58,11 @@ sample.ind = sample(2,
 data.dev = data[sample.ind==1,]
 data.val = data[sample.ind==2,]
 
-#See how data sets look as edible vs poisonous proportion ratio
-#To see if the traning and test data are some what equal
+```
+The data sets look good as edible vs poisonous proportion ratio is about equal
+To see if the traning and test data are some what equal
 
+```
 table(data$Edible)/nrow(data)
 
    Edible Poisonous 
@@ -69,9 +76,11 @@ table(data.val$Edible)/nrow(data.val)
    Edible Poisonous 
 0.5187727 0.4812273
 
-#Run the random forest algorithm with number of trees being 100
-#The more the better, but we don't want to over do it.
+```
+Lets run the random forest algorithm with number of trees being 100
+The more the better, but we don't want to over do it.
 
+```
 rf = randomForest(Edible ~ ., 
                    ntree = 100,
                    data = data.dev)
@@ -84,6 +93,7 @@ plot(rf)
  
  This plot will tell us if the number of trees we pick will give good results.
  As you can see 10-30 trees causes a minor error span.
+ 
 ![](https://saltfog.github.io/assets/images/unnamed-chunk-13-1.png)
 
 ```
@@ -95,11 +105,12 @@ varImpPlot(rf,
            main="Top 10 - Variable Predictors")
 ```
 **Top 10 Predictors**
+
 ![](https://saltfog.github.io/assets/images/unnamed-chunk-15-1.png)
 
-```
 Looks like Odor is the greatest indicator along with Spore Print Color
 
+```
 var.imp = data.frame(importance(rf,
                                  type=2))
 
@@ -147,9 +158,13 @@ data.dev$predicted.response <- predict(rf , data.dev)
 confusionMatrix(data = data.dev$predicted.response,
                 reference = data.dev$Edible,
                 positive = 'Edible')
-                
+               
 ## Confusion Matrix and Statistics
 ## 
+```
+Here is the 400 samples ran through the model the confidence level is 99%, meaning we can say that we can predict mushroom edibility 99% of the time.
+```
+
 ##            Reference
 ## Prediction  Edible Poisonous
 ##   Edible       201         0
@@ -213,17 +228,17 @@ confusionMatrix(data=data.val$predicted.response,
 ##        'Positive' Class : Edible         
 ## 
 ```
-```
-#With odor and spore print color we can predict almost 99% of the time.
 
+With odor and spore print color we can predict almost 99% of the time.
+
+```
 #Lets plot some jitter classification plots to show what odors and spore print colors show the poisonous mushrooms
 
 #This plot shows that CapShape and CapSurface really dont give a good indication of edible mushrooms
 p = ggplot(data,aes(x=CapShape, y=CapSurface, color=Edible))
 p + geom_jitter(alpha=0.3) + scale_color_manual(breaks = c('Edible','Poisonous'),values=c('blue','orange'))
 ```
-
-**Jitter Plots**
+**ggPlot Jitter Plots**
 
 **CapShape vs CapSurface**
 ![](https://saltfog.github.io/assets/images/unnamed-chunk-4-1.png)
@@ -236,3 +251,5 @@ p + geom_jitter(alpha=0.3) + scale_color_manual(breaks = c('Edible','Poisonous')
 
 **Spore Print Color vs Edible**
 ![](https://saltfog.github.io/assets/images/unnamed-chunk-8-1.png)
+
+Odors fishy, foul and spicy indicate the mushroom is poisonous, so get smelling. 
