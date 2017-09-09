@@ -91,7 +91,7 @@ plot(rf)
 
  **rf plot**
  
- This plot will tell us if the number of trees we pick will give good results.
+ This plot will tell us if the number of trees we picked will give good results.
  As you can see 10-30 trees causes a minor error span.
  
 ![](https://saltfog.github.io/assets/images/unnamed-chunk-13-1.png)
