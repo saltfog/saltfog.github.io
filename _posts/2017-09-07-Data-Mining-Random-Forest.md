@@ -145,7 +145,7 @@ GillAttachment              0.01928571        GillAttachment
 VeilType                    0.00000000              VeilType
 
 ```
-
+Here is the 400 samples ran through the model the confidence level is 99%, meaning we can say that we can predict mushroom edibility 99% of the time. See the Confusion Matrix and Statistics below.
 ```
 #Predicting response variable
 
@@ -161,9 +161,6 @@ confusionMatrix(data = data.dev$predicted.response,
                
 ## Confusion Matrix and Statistics
 ## 
-```
-Here is the 400 samples ran through the model the confidence level is 99%, meaning we can say that we can predict mushroom edibility 99% of the time.
-```
 
 ##            Reference
 ## Prediction  Edible Poisonous
