@@ -273,7 +273,7 @@ ggplot(cust_acq,aes(x=first_day,y=1)) +
   xlab("Days in October 2014") + theme_light() 
 ```
 
-![](https://saltfog.github.io/assets/images/jumpman_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
+![](https://saltfog.github.io/assets/images/jumpman_files/figure-html/unnamed-chunk-16-1.png)
 
 
 
@@ -285,7 +285,7 @@ ggplot(df_unique,aes(x=wday(when_the_delivery_started,label=T), 1,group=1)) +
   ylab("Number of Deliveries")+xlab("Days of the Week") + theme_light() 
 ```
 
-![](https://saltfog.github.io/assets/images/jumpman_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
+![](https://saltfog.github.io/assets/images/jumpman_files/figure-html/unnamed-chunk-17-1.png)
 
 
 
@@ -305,7 +305,7 @@ ggplot(df_unique,aes(x=vehicle_type,y=delivery_time))+
 ## Warning: Removed 495 rows containing missing values (geom_tile).
 ```
 
-![](https://saltfog.github.io/assets/images/jumpman_files/figure-html/unnamed-chunk-18-1.png)<!-- -->
+![](https://saltfog.github.io/assets/images/jumpman_files/figure-html/unnamed-chunk-18-1.png)
 
 ```r
 #jumpman arrival by day of the week
@@ -323,7 +323,7 @@ ggplot(df_unique,aes(x=wday(when_the_delivery_started,label=T),y=delivery_time))
 ## Warning: Removed 495 rows containing missing values (geom_tile).
 ```
 
-![](https://saltfog.github.io/assets/images/jumpman_files/figure-html/unnamed-chunk-18-2.png)<!-- -->
+![](https://saltfog.github.io/assets/images/jumpman_files/figure-html/unnamed-chunk-18-2.png)
 
 
 
@@ -342,7 +342,7 @@ ggplot(df_unique,aes(x=vehicle_type,y=loading_time))+
 ## Warning: Removed 495 rows containing missing values (geom_tile).
 ```
 
-![](https://saltfog.github.io/assets/images/jumpman_files/figure-html/unnamed-chunk-19-1.png)<!-- -->
+![](https://saltfog.github.io/assets/images/jumpman_files/figure-html/unnamed-chunk-19-1.png)
 
 ```r
 ggplot(df_unique,aes(x=vehicle_type,y=delivery_distance))+
@@ -352,7 +352,7 @@ ggplot(df_unique,aes(x=vehicle_type,y=delivery_distance))+
   ylab("Distance (Miles)") + theme_light()
 ```
 
-![](https://saltfog.github.io/assets/images/jumpman_files/figure-html/unnamed-chunk-19-2.png)<!-- -->
+![](https://saltfog.github.io/assets/images/jumpman_files/figure-html/unnamed-chunk-19-2.png)
 
 ```r
 ggplot(df_unique,aes(x=vehicle_type,y=jumpman_avg_speed))+
@@ -366,7 +366,7 @@ ggplot(df_unique,aes(x=vehicle_type,y=jumpman_avg_speed))+
 ## Warning: Removed 495 rows containing non-finite values (stat_boxplot).
 ```
 
-![](https://saltfog.github.io/assets/images/jumpman_files/figure-html/unnamed-chunk-19-3.png)<!-- -->
+![](https://saltfog.github.io/assets/images/jumpman_files/figure-html/unnamed-chunk-19-3.png)
 
 ```r
 ggplot(df_unique,aes(x=vehicle_type,y=jumpman_avg_speed))+
