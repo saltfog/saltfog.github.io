@@ -217,10 +217,6 @@ ggplot(data.frame(as.vector(table(df_unique$customer_id)))) +
   ylab("Number of Customers") + theme_light()
 ```
 
-![](https://saltfog.github.io/assets/images/jumpman_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
-
-
-
 ```r
 #vehicle usage
 ggplot(df_unique,aes(x=vehicle_type, 1,group=1)) +
@@ -229,7 +225,7 @@ ggplot(df_unique,aes(x=vehicle_type, 1,group=1)) +
   xlab("Vehicle Type")+ylab("Number of Deliveries") + theme_light()
 ```
 
-![](https://saltfog.github.io/assets/images/jumpman_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
+![](https://i.imgur.com/mvjx5Dk.png)
 
 
 
@@ -241,7 +237,7 @@ ggplot(df_unique,aes(x=wday(when_the_delivery_started,label=T), 1,group=vehicle_
   xlab("Days of the Week")+ylab("Number of Deliveries") + theme_light() 
 ```
 
-![](https://saltfog.github.io/assets/images/jumpman_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
+![](https://i.imgur.com/4Mv1ohE.png?1)
 
 
 
@@ -273,7 +269,7 @@ ggplot(cust_acq,aes(x=first_day,y=1)) +
   xlab("Days in October 2014") + theme_light() 
 ```
 
-![](https://saltfog.github.io/assets/images/jumpman_files/figure-html/unnamed-chunk-16-1.png)
+![](https://i.imgur.com/yWd2nuh.png)
 
 
 
@@ -285,7 +281,7 @@ ggplot(df_unique,aes(x=wday(when_the_delivery_started,label=T), 1,group=1)) +
   ylab("Number of Deliveries")+xlab("Days of the Week") + theme_light() 
 ```
 
-![](https://saltfog.github.io/assets/images/jumpman_files/figure-html/unnamed-chunk-17-1.png)
+![](https://i.imgur.com/3vgUvtL.png)
 
 
 
@@ -305,7 +301,7 @@ ggplot(df_unique,aes(x=vehicle_type,y=delivery_time))+
 ## Warning: Removed 495 rows containing missing values (geom_tile).
 ```
 
-![](https://saltfog.github.io/assets/images/jumpman_files/figure-html/unnamed-chunk-18-1.png)
+![](https://i.imgur.com/TnjrC4I.png)
 
 ```r
 #jumpman arrival by day of the week
@@ -323,7 +319,7 @@ ggplot(df_unique,aes(x=wday(when_the_delivery_started,label=T),y=delivery_time))
 ## Warning: Removed 495 rows containing missing values (geom_tile).
 ```
 
-![](https://saltfog.github.io/assets/images/jumpman_files/figure-html/unnamed-chunk-18-2.png)
+![](https://i.imgur.com/gqVJDuV.png)
 
 
 
@@ -342,7 +338,7 @@ ggplot(df_unique,aes(x=vehicle_type,y=loading_time))+
 ## Warning: Removed 495 rows containing missing values (geom_tile).
 ```
 
-![](https://saltfog.github.io/assets/images/jumpman_files/figure-html/unnamed-chunk-19-1.png)
+![](https://i.imgur.com/ukxGmUC.png)
 
 ```r
 ggplot(df_unique,aes(x=vehicle_type,y=delivery_distance))+
@@ -352,7 +348,7 @@ ggplot(df_unique,aes(x=vehicle_type,y=delivery_distance))+
   ylab("Distance (Miles)") + theme_light()
 ```
 
-![](https://saltfog.github.io/assets/images/jumpman_files/figure-html/unnamed-chunk-19-2.png)
+![](https://i.imgur.com/a4J6SUh.png)
 
 ```r
 ggplot(df_unique,aes(x=vehicle_type,y=jumpman_avg_speed))+
@@ -366,19 +362,7 @@ ggplot(df_unique,aes(x=vehicle_type,y=jumpman_avg_speed))+
 ## Warning: Removed 495 rows containing non-finite values (stat_boxplot).
 ```
 
-![](https://saltfog.github.io/assets/images/jumpman_files/figure-html/unnamed-chunk-19-3.png)
+![](https://i.imgur.com/l7mvEoZ.png)
 
-```r
-ggplot(df_unique,aes(x=vehicle_type,y=jumpman_avg_speed))+
-  geom_boxplot()+
-  ggtitle("Average Delivery Speed by Vehicle Type")+
-  xlab("Vehicle Type")+
-  ylab("Speed (MPH)")+ylim(0,20) + theme_light()
-```
 
-```
-## Warning: Removed 508 rows containing non-finite values (stat_boxplot).
-```
-
-![](https://saltfog.github.io/assets/images/jump_files/figure-html/unnamed-chunk-19-4.png)
 
