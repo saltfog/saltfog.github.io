@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d484bb1a-7e81-493c-bf40-8063ccdaaa97" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2018-01-09-Anomoly-Detection.Rmd" afterPath="$PROJECT_DIR$/_posts/2018-01-09-Anomoly-Detection.Rmd" />
-    </list>
+    <list default="true" id="d484bb1a-7e81-493c-bf40-8063ccdaaa97" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -180,12 +178,12 @@
       <updated>1515558482456</updated>
       <workItem from="1515558484727" duration="387000" />
       <workItem from="1515558897952" duration="879000" />
-      <workItem from="1515560243184" duration="937000" />
+      <workItem from="1515560243184" duration="1033000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2203000" />
+    <option name="totallyTimeSpent" value="2299000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
