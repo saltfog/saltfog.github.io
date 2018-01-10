@@ -17,20 +17,21 @@ MathJax
 
 f(x)=(2\pi)^\frac{-k}{2} |\Sigma|^\frac{-1}{2}e^{-1/2(x-\mu)^{'} \Sigma^{-1}(x-\mu)}
 
-````
+
+```{r libaries}
 library(magrittr)  
 library(ggplot2)  
 library(MASS)      
 library(caret) 
 library(reshape2) 
-````
+```
 
-````
+```{r load the data}
 load("data1.RData")
-````
+```
 
-````
+```{r }
 x=data1$X
 x=data1$Xval   # This is cross-validation data
 y =data1$yval  # This shows which rows in Xval are anomalous
-````
+```
