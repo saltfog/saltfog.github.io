@@ -18,7 +18,7 @@ MathJax
 f(x)=(2\pi)^\frac{-k}{2} |\Sigma|^\frac{-1}{2}e^{-1/2(x-\mu)^{'} \Sigma^{-1}(x-\mu)}
 
 
-```{r libaries}
+```
 library(magrittr)  
 library(ggplot2)  
 library(MASS)      
@@ -26,18 +26,14 @@ library(caret)
 library(reshape2) 
 ```
 
-```{r load the data}
+```
 load("data1.RData")
 ```
 
-```{r }
+```
 x=data1$X
 x=data1$Xval   # This is cross-validation data
 y =data1$yval  # This shows which rows in Xval are anomalous
-```
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## R Markdown
@@ -46,22 +42,12 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r library}
+```
 library(magrittr)  # to use piping %>%
 library(ggplot2)   # for ploting
 library(MASS)      # to calculate the pseudo-inverse of a matrix
 library(caret)     # to center our data by subtracting its mean
 library(reshape2)  # for data manipulation
 ```
-```{r}
-data("pressure")
-```
 
 ## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-``````````````````````````
