@@ -24,6 +24,7 @@ output:
 
 All four sets are identical when examined using simple summary statistics, but vary considerably when graphed
 Anscombe's quartet comprises four datasets that have nearly identical simple descriptive statistics, yet appear very different when graphed. Each dataset consists of eleven (x,y) points. They were constructed in 1973 by the statistician Francis Anscombe to demonstrate both the importance of graphing data before analyzing it and the effect of outliers on statistical properties. He described the article as being intended to counter the impression among statisticians that "numerical calculations are exact, but graphs are rough
+
 The Anscombe dataset, which is found in the base R datasets packege, is handy for showing the importance of data visualization in data analysis. It consists of four datasets and each dataset consists of eleven (x,y) points.
 
 **The Four Data Sets**
