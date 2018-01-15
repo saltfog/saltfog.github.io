@@ -1,53 +1,21 @@
 ---
 layout: post
-title: Anomaly Detection with R
-description: Anomaly detection is used for many different applications. It is a commonly used technique for fraud detection. It is also used in manufacturing to detect anomalous systems such as aircraft engines. It can also be used to identify anomalous medical devices and machines in a data center.
+title: The Importance of Data Visualization.
+description: Before we perform any analysis and come up with any assumptions about the distributions of and relationships between variables in our datasets, it is always a good idea to visualize our data in order to understand their properties and identify appropriate analytics techniques. In this post, let's see the dramatic differences in conclutions that we can make based on (1) simple statistics only, and (2) data visualization.
 keywords: data
 tags: [R, Data Science, Machine Learning]
 comments: false
 ---
 
-I will implement an anomaly detection algorithm and apply it to detect failing servers on a network.
+The Anscombe dataset, which is found in the base R datasets packege, is handy for showing the importance of data visualization in data analysis. It consists of four datasets and each dataset consists of eleven (x,y) points.
 
-First, we will start with 2D data and detect anomalous servers based on two features. We will plot the 2D data and see the algorithm's performance on a 2D plot. The features measure the through-put (mb/s) and latency (ms) of response of each server.
-I will use a gaussian model to detect anomalous examples in our dataset. We use multivariate normal distribution to detect servers with very low probabilities and hence can be considered anomalous (outliers).
+**The Four Data Sets**
 
-
-MathJax
-
-f(x)=(2\pi)^\frac{-k}{2} |\Sigma|^\frac{-1}{2}e^{-1/2(x-\mu)^{'} \Sigma^{-1}(x-\mu)}
-
-
+```{r echo=TRUE}
+data(anscombe)
 ```
-library(magrittr)  
-library(ggplot2)  
-library(MASS)      
-library(caret) 
-library(reshape2) 
-```
-
-```
-load("data1.RData")
-```
-
-```
-x=data1$X
-x=data1$Xval   # This is cross-validation data
-y =data1$yval  # This shows which rows in Xval are anomalous
-```
-
-## R Markdown
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```
-library(magrittr)  # to use piping %>%
-library(ggplot2)   # for ploting
-library(MASS)      # to calculate the pseudo-inverse of a matrix
-library(caret)     # to center our data by subtracting its mean
-library(reshape2)  # for data manipulation
-```
-
-## Including Plots
