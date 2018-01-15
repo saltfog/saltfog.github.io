@@ -32,26 +32,6 @@ The Anscombe dataset, which is found in the base R datasets packege, is handy fo
 ```r
 library(ggplot2)
 library(dplyr)
-```
-
-```
-## 
-## Attaching package: 'dplyr'
-```
-
-```
-## The following objects are masked from 'package:stats':
-## 
-##     filter, lag
-```
-
-```
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
-```
-
-```r
 library(reshape2)
 ```
 
@@ -81,17 +61,6 @@ A=select(anscombe, x=x1,y=y1)
 B=select(anscombe, x=x2,y=y2)
 C=select(anscombe, x=x3,y=y3)
 D=select(anscombe, x=x4,y=y4)
-```
-
-Let's add a third column to help visualize the data.
-
-
-```
-##    x    y group
-## 1 10 8.04     A
-## 2  8 6.95     A
-## 3 13 7.58     A
-## 4  9 8.81     A
 ```
 
 Now, let's merge the four datasets.
@@ -128,27 +97,7 @@ models = alldata %>%
                     coef = round(coef(.$mod),2),
                     group = .$group)) %>%
 dcast(., group~var, value.var = "coef")
-```
 
-```
-## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character
-```
-
-```
-## Warning in bind_rows_(x, .id): binding character and factor vector,
-## coercing into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector,
-## coercing into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector,
-## coercing into character vector
-
-## Warning in bind_rows_(x, .id): binding character and factor vector,
-## coercing into character vector
-```
-
-```r
 summaryStats_and_linear_fit = cbind(summaryStats, data_frame("Linear Regression" =
                                     paste0("Y = ",models$"(Intercept)"," + ",models$x,"X")))
 
@@ -156,12 +105,12 @@ summaryStats_and_linear_fit
 ```
 
 ```
-##   group Mean X Sample Variance X Mean Y Sample Variance Y
+## Group Mean X Sample Variance X Mean Y Sample Variance Y
 ## 1     A      9                11    7.5               4.1
 ## 2     B      9                11    7.5               4.1
 ## 3     C      9                11    7.5               4.1
 ## 4     D      9                11    7.5               4.1
-##   Correlation between X and Y  Linear Regression
+## Correlation between X and Y  Linear Regression
 ## 1                         0.82      Y = 3 + 0.5X
 ## 2                         0.82      Y = 3 + 0.5X
 ## 3                         0.82      Y = 3 + 0.5X
