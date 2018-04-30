@@ -4,7 +4,7 @@ description: Before we perform any analysis and come up with any assumptions abo
   the distributions of and relationships between variables in our datasets, it is
   always a good idea to visualize our data in order to understand their properties
   and identify appropriate analytics techniques. In this post, let's see the dramatic
-  differences in conclutions that we can make based on (1) simple statistics only,
+  differences in conclusions that we can make based on (1) simple statistics only,
   and (2) data visualization.
 keywords: data
 layout: post
@@ -13,8 +13,8 @@ tags:
 - Data Science
 - Machine Learning
 comments: no
-output: 
-  html_document: 
+output:
+  html_document:
     keep_md: yes
 ---
 
@@ -90,7 +90,7 @@ summaryStats =alldata%>%group_by(group)%>%summarize("Mean X"=mean(x),
                                        'Correlation between X and Y '=round(cor(x,y),2)
                                       )
 
-models = alldata %>% 
+models = alldata %>%
       group_by(group) %>%
       do(mod = lm(y ~ x, data = .)) %>%
       do(data.frame(var = names(coef(.$mod)),
@@ -124,7 +124,7 @@ What if we plot the four data sets?
 
 ```r
 ggplot(alldata, aes(x = x,y = y)) + geom_point(shape = 21, colour = "black", fill = "grey", size = 3, alpha = 0.8) +
-    ggtitle("Anscombe's Data Sets")+ geom_smooth(method = "lm", se = FALSE, color='blue') + 
+    ggtitle("Anscombe's Data Sets")+ geom_smooth(method = "lm", se = FALSE, color='blue') +
     facet_wrap(~group, scales="free")
 ```
 
