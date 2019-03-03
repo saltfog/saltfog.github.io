@@ -17,15 +17,19 @@ from numpy.random import seed
 from numpy.random import randn
 from scipy.stats import f_oneway
 from matplotlib import pyplot
+
 # Seed the random number generator
 seed(129)
+
 # Generate three independent samples
 d1 = 5 * randn(100) + 50
 d2 = 5 * randn(100) + 50
 d3 = 5 * randn(100) + 50
+
 # Compare the above samples 
 stat, p = f_oneway(d1, d2, d3)
 print('Statistics=%.3f, p=%.3f' % (stat, p))
+
 # Set the alpha
 alpha = 0.05
 if p > alpha:
@@ -43,15 +47,11 @@ pyplot.hist(d1, alpha=0.75)
 pyplot.hist(d2, alpha=0.75)
 pyplot.hist(d3, alpha=0.75)
 pyplot.grid(True)
+
 # show line plot
 pyplot.show()
 
 {% endhighlight %}
 
-
-
-
-
-
 **Histogram**
- ![Histogram](https://saltfog.github.io/assets/images/histogram.png)
+ ![Histogram](https://saltfog.github.io/assets/images/ANOVA-Histogram.png)
