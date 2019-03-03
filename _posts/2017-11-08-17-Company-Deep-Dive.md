@@ -3,7 +3,7 @@ layout: post
 title: Company Deep Dive
 description: The CEO of Company has just asked you “how are things going in New York”. He has mentioned to you that he’s heard reports of data integrity issues. Please think through the CEO’s ask and present to both the CEO and the CTO, in any format you choose, an analysis of the market. In addition, dive into the reports on data integrity issues and if they indeed exist, outline where they may be and how they may impact the analysis.
 keywords: data
-tags: [R, Data Science, Machine Learning]
+tags: [R DataScience MachineLearning]
 comments: true
 ---
 

@@ -10,8 +10,8 @@ keywords: data
 layout: post
 tags:
 - R
-- Data Science
-- Machine Learning
+- DataScience
+- MachineLearning
 comments: no
 output:
   html_document:

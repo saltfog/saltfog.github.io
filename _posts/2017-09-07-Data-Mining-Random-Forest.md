@@ -3,7 +3,7 @@ layout: post
 title: Machine Learning with the Random Forest Algorithm
 description: Using a mushroom data set can we determine if a mushroom is editable or poisonous with Machine Learning using R.
 keywords: data
-tags: [R, Data Science, Machine Learning]
+tags: [R DataScience MachineLearning]
 comments: true
 ---
 
