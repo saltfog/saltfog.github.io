@@ -3,7 +3,7 @@ title: "Simple demo of a ANOVA test using Python"
 description: Analysis of Variance (ANOVA) is a statistical method used to test differences between two or more data set means. 
 keywords: data
 layout: post
-tags: Python, Data Science, Machine Learning]
+tags: Python, Data Science, MachineLearning
 comments: no
 output:
   html_document:
