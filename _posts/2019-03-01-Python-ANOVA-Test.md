@@ -42,12 +42,15 @@ else:
 pyplot.xlabel('X')
 pyplot.ylabel('Frequency')
 pyplot.title('Histogram of the three data sets')
-pyplot.hist(d1, alpha=0.75) pyplot.hist(d2, alpha=0.75) pyplot.hist(d3, alpha=0.75)
+pyplot.hist(d1, alpha=0.75) 
+pyplot.hist(d2, alpha=0.75) 
+pyplot.hist(d3, alpha=0.75)
 pyplot.grid(True)
 
 # show line plot
 pyplot.show()
 
+{% endraw %}
 {% endhighlight %}
 
 **Histogram**
