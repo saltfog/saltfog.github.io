@@ -1,26 +1,25 @@
 ---
-title: "The Birthday Simulation."
-description: Nothing novel or unique about this problem.  This just extends the problem to measure the probability to three or more people sharing the same
-  birthday using simulation approaches. Though there are other ways to approach this problem with built-in functions the example below shows some of the          individual steps.
-  For two people it’s fairly straight forward and with a group of about 22 people the probability that two people share the same birthday is about 0.5.  For      groups approaching 50 there is an extremely high probability that two people share the same birthday.
-keywords: data
 layout: post
-tags:
-- R
-- DataScience
-- MachineLearning
-comments: no
-output:
-  html_document:
-    keep_md: yes
+title: Probability and the Birthday Paradox
+description: Probability and the Birthday Paradox and The Pigeonhole principle
+keywords: data
+tags: [R DataScience MachineLearning]
+comments: true
 ---
+When is college I took a discrete math class, we went around the room and shouted out our birth day, we got to the 17th person and we had a match. 
 
+The birthday paradox, also known as the birthday problem, states that in a random group of 23 people, there is about a 50 percent chance that two people have the same birthday. Is this really true?
 
-![](https://saltfog.github.io/assets/images/Prob2Birthday.png)
+Though there are other ways to approach this problem with built-in functions the example below shows some of the individual steps. For two people it’s fairly straight forward and with a group of about 22 people the probability that two people share the same birthday is about 0.5.
+For groups approaching 50 there is an extremely high probability that two people share the same birthday.
 
-When determining that three (or more) people have the same birthday the probability decreases fairly quickly compared to measuring only two people.  A fairly large group would be needed to find three people with the same birthday.
+ **Probability Plot**
+![Probability Plot](https://saltfog.github.io/assets/images/Prob2Birthday.png)
 
-![](https://saltfog.github.io/assets/images/Birthday-Plot.png)
+When determining that three (or more) people have the same birthday the probability decreases fairly quickly compared to measuring only two people. A fairly large group would be needed to find three people with the same birthday.
+
+**Probability plot for more than two people**
+![Probability Plot](https://saltfog.github.io/assets/images/Birthday-Plot.png)
 
 
 ```r
