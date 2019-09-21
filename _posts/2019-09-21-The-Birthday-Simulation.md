@@ -21,7 +21,7 @@ When determining that three (or more) people have the same birthday the probabil
 **Probability plot for more than two people**
 ![Probability Plot](https://saltfog.github.io/assets/images/Birthday-Plot.png)
 
-
+{% highlight r %}
 ```r
 n.rep = 5000
 theta.val = 75

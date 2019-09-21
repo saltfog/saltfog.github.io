@@ -48,8 +48,5 @@ pyplot.grid(True)
 # show line plot
 pyplot.show()
 
-{% endraw %}
-{% endhighlight %}
-
 **Histogram**
  ![Histogram](https://saltfog.github.io/assets/images/ANOVA-Histogram.png)
