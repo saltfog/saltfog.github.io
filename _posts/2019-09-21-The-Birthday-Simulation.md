@@ -6,7 +6,7 @@ keywords: data
 tags: [R DataScience MachineLearning]
 comments: true
 ---
-When is college I took a discrete math class, we went around the room and shouted out our birth day, we got to the 17th person and we had a match. 
+When in college I took a discrete math class, we went around the room and shouted out our birthday, we got to the 17th person and we had a match. 
 
 The birthday paradox, also known as the birthday problem, states that in a random group of 23 people, there is about a 50 percent chance that two people have the same birthday. Is this really true?
 
@@ -21,7 +21,6 @@ When determining that three (or more) people have the same birthday the probabil
 **Probability plot for more than two people**
 ![Probability Plot](https://saltfog.github.io/assets/images/Birthday-Plot.png)
 
-{% highlight r %}
 ```r
 n.rep = 5000
 theta.val = 75
