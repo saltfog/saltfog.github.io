@@ -2,9 +2,14 @@
 layout: post
 title: Probability and the Birthday Paradox
 description: Probability and the Birthday Paradox and The Pigeonhole principle
-keywords: data
-tags: [R DataScience MachineLearning]
-comments: true
+tags:
+- R
+- DataScience
+- MachineLearning
+comments: no
+output:
+  html_document:
+    keep_md: yes
 ---
 When in college I took a discrete math class, we went around the room and shouted out our birthday, we got to the 17th person and we had a match. 
 
