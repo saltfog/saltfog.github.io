@@ -19,12 +19,12 @@ Though there are other ways to approach this problem with built-in functions the
 For groups approaching 50 there is an extremely high probability that two people share the same birthday.
 
  **Probability Plot**
-![Probability Plot](https://saltfog.github.io/assets/images/Prob2Birthday.png)
+![Probability Plot](https://saltfog.github.io/assets/images/Prob2Birthday.jpeg)
 
 When determining that three (or more) people have the same birthday the probability decreases fairly quickly compared to measuring only two people. A fairly large group would be needed to find three people with the same birthday.
 
 **Probability plot for more than two people**
-![Probability Plot](https://saltfog.github.io/assets/images/Birthday-Plot.png)
+![Probability Plot](https://saltfog.github.io/assets/images/Birthday-Plot.jpeg)
 
 ```r
 n.rep = 5000
@@ -40,9 +40,9 @@ p = 1 - prod(q)
 theta.list = seq(from=2, to=75, by=1)
 p.graph = sapply(theta.list, getProb)
 fifty.fifty = which(p.graph >.5)[1]
-plot(p.graph, main="Probability Two People Have the Same Birthday", ylab='Probability', xlab="Number of People in Group")
-lines(p.graph)
-abline(h=.5, v=fifty.fifty)
+plot(p.graph, main="Probability Two People Have the Same Birthday", ylab='Probability', xlab="Number of People in Group", type = "l")
+lines(p.graph, type = "l", col = "darkred")
+abline(h=.5, v=fifty.fifty, col = "black")
 
 ## For matching multiple people
 
@@ -71,9 +71,9 @@ main="Probability of Having Multiple People with the Same Birthday",
 xlab="People with Birthday",
 ylab="Probability")
 barplot(graph.sim[2,], ylim=c(0,1), col="blue", add=T)
-barplot(graph.sim[3,], ylim=c(0,1), col="black", add=T)
+barplot(graph.sim[3,], ylim=c(0,1), col="green", add=T)
 abline(h=.5)
-legend("topleft", c("2","3","4"), col=c("red","blue","black"), lwd=3)
+legend("topleft", c("2","3","4"), col=c("red","blue","green"), lwd=3)
 
 
 ```
